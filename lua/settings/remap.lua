@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 
 -- Search and replace
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set({"n", "x"}, "<leader>cs", [[:s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set({ "n", "x" }, "<leader>cs", [[:s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Window management
 vim.keymap.set("n", "<leader>cw", "<C-w>w")
@@ -37,3 +37,5 @@ vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<CR>")
 -- Miscellaneous
 vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so") end)
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-x>", "<cmd>!chmod +x %<CR>", { silent = true })
